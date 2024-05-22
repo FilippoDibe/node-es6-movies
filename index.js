@@ -158,3 +158,37 @@ console.log();
   console.log("Film e serie tv nel genere 'Drama':", filterMoviesByGenre(mediaObjects, "Drama"));
 
 //   bonus classe cart
+class Cart {
+    constructor() {
+        this.items = [];
+        this.pricePerItem = 3.99;
+    }
+
+    addMovie(movie) {
+        this.items.push(movie);
+    }
+
+    removeMovie(movie) {
+        const index = this.items.indexOf(movie);
+        if (index > -1) {
+            this.items.splice(index, 1);
+        }
+    }
+
+    getTotalCost() {
+        return this.items.length * this.pricePerItem;
+    }
+
+    printTotalCost() {
+        const totalCost = this.getTotalCost();
+        console.log(`Il costo totale per noleggiare ${this.items.length} film è €${totalCost.toFixed(2)}`);
+    }
+}
+// Test della classe Cart
+const cart = new Cart();
+cart.addMovie(mediaObjects[0]); 
+cart.addMovie(mediaObjects[1]); 
+cart.addMovie(mediaObjects[4]); 
+cart.addMovie(mediaObjects[7]); 
+cart.removeMovie(mediaObjects[1]); 
+cart.printTotalCost(); 
