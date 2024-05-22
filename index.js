@@ -156,3 +156,5 @@ console.log();
   console.log("Lista di generi unici:", getUniqueGenres(mediaObjects));
   console.log();
   console.log("Film e serie tv nel genere 'Drama':", filterMoviesByGenre(mediaObjects, "Drama"));
+
+//   bonus classe cart
