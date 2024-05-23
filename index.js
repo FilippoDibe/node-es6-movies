@@ -80,12 +80,11 @@ const media = [
 
   // 2. creare la classe Movie che contenga le proprietà dell'array 
   class Movie {
-      constructor(title, year, genre, rating, type){
+      constructor(title, year, genre, rating){
           this.title = title;
           this.year = year;
           this.genre = genre;
           this.rating = rating;
-          this.type = type;
       }
   
       // toString che ritorna una stringa di dati dei film 
@@ -96,8 +95,8 @@ const media = [
   
   // 3. creo la classe TvSeries che estende Movie 
   class TvSeries extends Movie {
-      constructor(title, year, genre, rating, type, seasons){
-          super(title, year ,genre, rating, type);
+      constructor(title, year, genre, rating, seasons){
+          super(title, year ,genre, rating);
           this.seasons = seasons;
       }
   
